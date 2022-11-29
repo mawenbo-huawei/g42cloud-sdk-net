@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elb", "Elb.csproj", "{e15b6d96-3026-44f3-6e15-a7bb7f8f1ebb}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{e15b6d96-3026-44f3-6e15-a7bb7f8f1ebb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e15b6d96-3026-44f3-6e15-a7bb7f8f1ebb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e15b6d96-3026-44f3-6e15-a7bb7f8f1ebb}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{e15b6d96-3026-44f3-6e15-a7bb7f8f1ebb}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/data/fuxi_ci_workspace/637dc484a7694257a151671f/Services/Ecs/Ecs.csproj": {}
+    "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86/Services/Ecs/Ecs.csproj": {}
   },
   "projects": {
-    "/data/fuxi_ci_workspace/637dc484a7694257a151671f/Services/Ecs/Ecs.csproj": {
-      "version": "0.0.1-beta",
+    "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86/Services/Ecs/Ecs.csproj": {
+      "version": "0.0.2-beta",
       "restore": {
-        "projectUniqueName": "/data/fuxi_ci_workspace/637dc484a7694257a151671f/Services/Ecs/Ecs.csproj",
+        "projectUniqueName": "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86/Services/Ecs/Ecs.csproj",
         "projectName": "G42Cloud.SDK.Ecs",
-        "projectPath": "/data/fuxi_ci_workspace/637dc484a7694257a151671f/Services/Ecs/Ecs.csproj",
+        "projectPath": "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86/Services/Ecs/Ecs.csproj",
         "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/data/fuxi_ci_workspace/637dc484a7694257a151671f/Services/Ecs/obj/",
+        "outputPath": "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86/Services/Ecs/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/dotnet2/sdk/NuGetFallbackFolder"
@@ -23,7 +23,7 @@
           "netstandard2.0"
         ],
         "sources": {
-          "/data/fuxi_ci_workspace/637dc484a7694257a151671f": {}
+          "/data/fuxi_ci_workspace/6385c73d275b097b2bc44b86": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -41,7 +41,7 @@
           "dependencies": {
             "HuaweiCloud.SDK.Core": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.11, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

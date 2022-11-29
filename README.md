@@ -1,5 +1,3 @@
-English | [简体中文](README_CN.md)
-
 <p align="center">
 <a href="https://www.g42cloud.com/"><img width="450px" height="102px" src="https://auth.g42cloud.com//authui/20220614193554/public/custom/images/logo.svg"></a>
 </p>
