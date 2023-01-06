@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Runtime.Serialization;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Ecs.V2.Model
 {
@@ -28,11 +29,16 @@ namespace G42Cloud.SDK.Ecs.V2.Model
                 { "", EMPTY },
             };
 
-            private string Value;
+            private string _value;
+
+            public SubnetIdEnum()
+            {
+
+            }
 
             public SubnetIdEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static SubnetIdEnum FromValue(string value)
@@ -51,17 +57,17 @@ namespace G42Cloud.SDK.Ecs.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -90,7 +96,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(SubnetIdEnum a, SubnetIdEnum b)
@@ -128,11 +134,16 @@ namespace G42Cloud.SDK.Ecs.V2.Model
                 { "", EMPTY },
             };
 
-            private string Value;
+            private string _value;
+
+            public IpAddressEnum()
+            {
+
+            }
 
             public IpAddressEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static IpAddressEnum FromValue(string value)
@@ -151,17 +162,17 @@ namespace G42Cloud.SDK.Ecs.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -190,7 +201,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(IpAddressEnum a, IpAddressEnum b)

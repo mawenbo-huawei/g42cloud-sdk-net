@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Runtime.Serialization;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Elb.V3.Model
 {
@@ -40,11 +41,16 @@ namespace G42Cloud.SDK.Elb.V3.Model
                 { "${protocol}", _PROTOCOL_ },
             };
 
-            private string Value;
+            private string _value;
+
+            public ProtocolEnum()
+            {
+
+            }
 
             public ProtocolEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static ProtocolEnum FromValue(string value)
@@ -63,17 +69,17 @@ namespace G42Cloud.SDK.Elb.V3.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -102,7 +108,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(ProtocolEnum a, ProtocolEnum b)
@@ -164,11 +170,16 @@ namespace G42Cloud.SDK.Elb.V3.Model
                 { "308", _308 },
             };
 
-            private string Value;
+            private string _value;
+
+            public StatusCodeEnum()
+            {
+
+            }
 
             public StatusCodeEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static StatusCodeEnum FromValue(string value)
@@ -187,17 +198,17 @@ namespace G42Cloud.SDK.Elb.V3.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -226,7 +237,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(StatusCodeEnum a, StatusCodeEnum b)

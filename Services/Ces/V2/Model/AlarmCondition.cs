@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Runtime.Serialization;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Ces.V2.Model
 {
@@ -64,11 +65,16 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 { 86400, NUMBER_86400 },
             };
 
-            private int? Value;
+            private int? _value;
+
+            public PeriodEnum()
+            {
+
+            }
 
             public PeriodEnum(int? value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static PeriodEnum FromValue(int? value)
@@ -87,17 +93,17 @@ namespace G42Cloud.SDK.Ces.V2.Model
 
             public int? GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -126,7 +132,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(PeriodEnum a, PeriodEnum b)
@@ -212,11 +218,16 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 { 43200, NUMBER_43200 },
             };
 
-            private int? Value;
+            private int? _value;
+
+            public SuppressDurationEnum()
+            {
+
+            }
 
             public SuppressDurationEnum(int? value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static SuppressDurationEnum FromValue(int? value)
@@ -235,17 +246,17 @@ namespace G42Cloud.SDK.Ces.V2.Model
 
             public int? GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -274,7 +285,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(SuppressDurationEnum a, SuppressDurationEnum b)

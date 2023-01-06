@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Runtime.Serialization;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Vpc.V2.Model
 {
@@ -46,11 +47,16 @@ namespace G42Cloud.SDK.Vpc.V2.Model
                 { "network:router_centralized_snat", NETWORK_ROUTER_CENTRALIZED_SNAT },
             };
 
-            private string Value;
+            private string _value;
+
+            public DeviceOwnerEnum()
+            {
+
+            }
 
             public DeviceOwnerEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static DeviceOwnerEnum FromValue(string value)
@@ -69,17 +75,17 @@ namespace G42Cloud.SDK.Vpc.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -108,7 +114,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(DeviceOwnerEnum a, DeviceOwnerEnum b)
@@ -158,11 +164,16 @@ namespace G42Cloud.SDK.Vpc.V2.Model
                 { "DOWN", DOWN },
             };
 
-            private string Value;
+            private string _value;
+
+            public StatusEnum()
+            {
+
+            }
 
             public StatusEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static StatusEnum FromValue(string value)
@@ -181,17 +192,17 @@ namespace G42Cloud.SDK.Vpc.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -220,7 +231,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(StatusEnum a, StatusEnum b)

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Runtime.Serialization;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Ces.V2.Model
 {
@@ -40,11 +41,16 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 { "invalid", INVALID },
             };
 
-            private string Value;
+            private string _value;
+
+            public StatusEnum()
+            {
+
+            }
 
             public StatusEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static StatusEnum FromValue(string value)
@@ -63,17 +69,17 @@ namespace G42Cloud.SDK.Ces.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -102,7 +108,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(StatusEnum a, StatusEnum b)
@@ -158,11 +164,16 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 { 4, NUMBER_4 },
             };
 
-            private int? Value;
+            private int? _value;
+
+            public LevelEnum()
+            {
+
+            }
 
             public LevelEnum(int? value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static LevelEnum FromValue(int? value)
@@ -181,17 +192,17 @@ namespace G42Cloud.SDK.Ces.V2.Model
 
             public int? GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -220,7 +231,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(LevelEnum a, LevelEnum b)
@@ -264,11 +275,16 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 { "EVENT.CUSTOM", EVENT_CUSTOM },
             };
 
-            private string Value;
+            private string _value;
+
+            public TypeEnum()
+            {
+
+            }
 
             public TypeEnum(string value)
             {
-                Value = value;
+                _value = value;
             }
 
             public static TypeEnum FromValue(string value)
@@ -287,17 +303,17 @@ namespace G42Cloud.SDK.Ces.V2.Model
 
             public string GetValue()
             {
-                return Value;
+                return _value;
             }
 
             public override string ToString()
             {
-                return $"{Value}";
+                return $"{_value}";
             }
 
             public override int GetHashCode()
             {
-                return this.Value.GetHashCode();
+                return this._value.GetHashCode();
             }
 
             public override bool Equals(object obj)
@@ -326,7 +342,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
                 {
                     return false;
                 }
-                return StringComparer.OrdinalIgnoreCase.Equals(this.Value, obj.Value);
+                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
             }
 
             public static bool operator ==(TypeEnum a, TypeEnum b)

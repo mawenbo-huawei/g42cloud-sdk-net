@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 
 namespace G42Cloud.SDK.Cce.V3
 {

@@ -1,7 +1,7 @@
 using System.Net.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using HuaweiCloud.SDK.Core;
+using G42Cloud.SDK.Core;
 using G42Cloud.SDK.Cdn.V2.Model;
 
 namespace G42Cloud.SDK.Cdn.V2

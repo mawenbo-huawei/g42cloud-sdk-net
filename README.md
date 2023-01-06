@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://www.g42cloud.com/"><img width="450px" height="102px" src="https://auth.g42cloud.com//authui/20220614193554/public/custom/images/logo.svg"></a>
+<a href="https://www.g42cloud.com/"><img src="https://upload.wikimedia.org/wikipedia/en/4/43/Group_42_Logo.jpg"></a>
 </p>
 
 <h1 align="center">G42 Cloud .Net Software Development Kit (.Net SDK)</h1>
@@ -25,20 +25,20 @@ This document introduces how to obtain and use G42 Cloud .Net SDK.
 
 Run the following commands to install .Net SDK:
 
-You must install `HuaweiCloud.SDK.Core` library no matter which product development kit you need to use. Take using VPC
-SDK for example, you need to install `HuaweiCloud.SDK.Core` library and `G42Cloud.SDK.Vpc` library:
+You must install `G42Cloud.SDK.Core` library no matter which product development kit you need to use. Take using VPC
+SDK for example, you need to install `G42Cloud.SDK.Core` library and `G42Cloud.SDK.Vpc` library:
 
 - Use .NET CLI
 
 ``` bash
-dotnet add package HuaweiCloud.SDK.Core
+dotnet add package G42Cloud.SDK.Core
 dotnet add package G42Cloud.SDK.Vpc
 ```
 
 - Use Package Manager
 
 ``` bash
-Install-Package HuaweiCloud.SDK.Core
+Install-Package G42Cloud.SDK.Core
 Install-Package G42Cloud.SDK.Vpc
 ```
 
@@ -50,8 +50,8 @@ Install-Package G42Cloud.SDK.Vpc
 
 ```csharp
 using System;
-using HuaweiCloud.SDK.Core;
-using HuaweiCloud.SDK.Core.Auth;
+using G42Cloud.SDK.Core;
+using G42Cloud.SDK.Core.Auth;
 // Import the specified {Service}, take Vpc as an example
 using G42Cloud.SDK.Vpc.V2;
 using G42Cloud.SDK.Vpc.V2.Model;
@@ -126,7 +126,6 @@ the [CHANGELOG.md](https://github.com/g42cloud-sdk/g42cloud-sdk-net/blob/master/
     * [2.2 Use Temporary AK&SK](#22-use-temporary-aksk-top)
 * [3. Client Initialization](#3-client-initialization-top)
     * [3.1 Initialize the client with specified Endpoint](#31-initialize-the-serviceclient-with-specified-endpoint-top)
-    * [3.2 Initialize the client with specified Region (Recommended)](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
 * [4. Send Requests and Handle Responses](#4-send-requests-and-handle-responses-top)
     * [4.1 Exceptions](#41-exceptions-top)
 * [5. Use Asynchronous Client](#5-use-asynchronous-client-top)
@@ -211,14 +210,6 @@ Credentials basicCredentials = new BasicCredentials(ak, sk, projectId);
 Credentials globalCredentials = new GlobalCredentials(ak, sk, domainId);
 ```
 
-**Notice**:
-
-- projectId/domainId supports **automatic acquisition** in version `3.0.26-beta` or later, if you want to use this
-  feature, you need to provide the ak and sk of your account and the id of the region, and then build your client
-  instance with method `WithRegion()`, detailed example could refer
-  to [3.2 Initialize the client with specified Region](#32-initialize-the-serviceclient-with-specified-region-recommended-top)
-  .
-
 #### 2.2 Use Temporary AK&SK [:top:](#user-manual-top)
 
 It's required to obtain temporary AK&SK and security token first, which could be obtained through
@@ -256,44 +247,6 @@ VpcClient vpcClient = VpcClient.NewBuilder()
     .WithHttpConfig(config)
     .Build();
 ```
-
-**where:**
-
-- `endpoint` is the service specific endpoints,
-  see [Regions and Endpoints](https://docs.g42cloud.com/endpoint/index.html).
-
-- When you meet some trouble in getting projectId using the specified region way, you could use this way instead.
-
-#### 3.2 Initialize the {Service}Client with specified Region **(Recommended)** [:top:](#user-manual-top)
-
-``` csharp
-// Initialize the credentials, projectId or domainId could be unassigned in this situation, take initializing GlobalCredentials for example
-Credentials globalCredentials = new GlobalCredentials(ak, sk);
-
-// Initialize specified {Service}Client instance, take initializing the global service IAM's IamClient for example
-IamClient iamClient = IamClient.NewBuilder()
-    .WithCredential(globalCredentials)
-    .WithRegion(IamRegion.CN_NORTH_4)
-    .WithHttpConfig(config)
-    .Build();
-```
-
-**Notice:**
-
-- If you use {Service}Region to initialize {Service}Client, projectId/domainId supports automatic acquisition, you don't
-  need to configure it when initializing Credentials.
-
-- Multiple ProjectId situation is **not supported**.
-
-- Supported region list: af-south-1, ap-southeast-1, ap-southeast-2, ap-southeast-3, cn-east-2, cn-east-3,
-  cn-north-1, cn-north-4, cn-south-1, cn-southwest-2, ru-northwest-2. You may get exception such as `Unsupported regionId` if your region don't in the list above.
-
-**Comparison of the two ways:**
-
-| Initialization | Advantages | Disadvantage |
-| :---- | :---- | :---- |
-| Specified Endpoint | The API can be invoked successfully once it has been published in the environment. | You need to prepare projectId and endpoint yourself.
-| Specified Region | No need for projectId and endpoint, it supports automatic acquisition if you configure it in the right way. | The supported services and regions are limited.
 
 ### 4. Send Requests and Handle Responses [:top:](#user-manual-top)
 

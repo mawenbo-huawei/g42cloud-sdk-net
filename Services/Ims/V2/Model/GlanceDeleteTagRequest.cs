@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+using System.Runtime.Serialization;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using G42Cloud.SDK.Core;
+
+namespace G42Cloud.SDK.Ims.V2.Model
+{
+    /// <summary>
+    /// Request Object
+    /// </summary>
+    public class GlanceDeleteTagRequest 
+    {
+
+        [SDKProperty("image_id", IsPath = true)]
+        [JsonProperty("image_id", NullValueHandling = NullValueHandling.Ignore)]
+        public string ImageId { get; set; }
+
+        [SDKProperty("tag", IsPath = true)]
+        [JsonProperty("tag", NullValueHandling = NullValueHandling.Ignore)]
+        public string Tag { get; set; }
+
+
+        /// <summary>
+        /// Get the string
+        /// </summary>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class GlanceDeleteTagRequest {\n");
+            sb.Append("  imageId: ").Append(ImageId).Append("\n");
+            sb.Append("  tag: ").Append(Tag).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        public override bool Equals(object input)
+        {
+            return this.Equals(input as GlanceDeleteTagRequest);
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        public bool Equals(GlanceDeleteTagRequest input)
+        {
+            if (input == null)
+                return false;
+
+            return 
+                (
+                    this.ImageId == input.ImageId ||
+                    (this.ImageId != null &&
+                    this.ImageId.Equals(input.ImageId))
+                ) && 
+                (
+                    this.Tag == input.Tag ||
+                    (this.Tag != null &&
+                    this.Tag.Equals(input.Tag))
+                );
+        }
+
+        /// <summary>
+        /// Get hash code
+        /// </summary>
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hashCode = 41;
+                if (this.ImageId != null)
+                    hashCode = hashCode * 59 + this.ImageId.GetHashCode();
+                if (this.Tag != null)
+                    hashCode = hashCode * 59 + this.Tag.GetHashCode();
+                return hashCode;
+            }
+        }
+    }
+}
