@@ -95,6 +95,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public List<ProjectFlavorLimit> LimitByFlavor { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

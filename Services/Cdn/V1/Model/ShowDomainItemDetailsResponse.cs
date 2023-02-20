@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public DomainItemDetail DomainItemDetails { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public List<SecurityGroup> SecurityGroups { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

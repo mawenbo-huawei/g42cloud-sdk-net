@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public List<VolumeType> VolumeTypes { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

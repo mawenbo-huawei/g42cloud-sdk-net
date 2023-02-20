@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public NovaAddSecurityGroupOption AddSecurityGroup { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

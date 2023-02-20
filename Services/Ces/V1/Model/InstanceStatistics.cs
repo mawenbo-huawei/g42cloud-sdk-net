@@ -26,6 +26,7 @@ namespace G42Cloud.SDK.Ces.V1.Model
         public int? TypeStatistics { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

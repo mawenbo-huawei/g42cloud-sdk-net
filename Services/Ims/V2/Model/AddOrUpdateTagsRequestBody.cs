@@ -26,6 +26,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public ResourceTag ImageTag { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

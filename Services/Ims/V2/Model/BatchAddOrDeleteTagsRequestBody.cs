@@ -133,6 +133,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public List<ResourceTag> Tags { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

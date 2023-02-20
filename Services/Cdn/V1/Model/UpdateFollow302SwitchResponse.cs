@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public Follow302StatusBody FollowStatus { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

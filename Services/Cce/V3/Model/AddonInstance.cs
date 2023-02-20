@@ -32,6 +32,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public AddonInstanceStatus Status { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

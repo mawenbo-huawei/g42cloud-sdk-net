@@ -44,6 +44,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public long? ExpirationTime { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -133,6 +133,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public string DomainId { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

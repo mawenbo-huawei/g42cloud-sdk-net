@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public List<Dictionary<string, Object>> RegionIspDetails { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

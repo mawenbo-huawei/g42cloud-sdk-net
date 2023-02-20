@@ -158,6 +158,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public Hypervisor Hypervisor { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

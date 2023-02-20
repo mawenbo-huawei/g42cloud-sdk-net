@@ -145,6 +145,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
         public List<string> Autoscaling { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

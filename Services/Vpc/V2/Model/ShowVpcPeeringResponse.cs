@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public VpcPeering Peering { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

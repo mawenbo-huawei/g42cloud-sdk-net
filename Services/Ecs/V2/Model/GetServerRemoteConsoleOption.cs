@@ -231,6 +231,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public TypeEnum Type { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

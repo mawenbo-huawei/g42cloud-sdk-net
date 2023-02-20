@@ -249,6 +249,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
         [JsonProperty("period_type", NullValueHandling = NullValueHandling.Ignore)]
         public PeriodTypeEnum PeriodType { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

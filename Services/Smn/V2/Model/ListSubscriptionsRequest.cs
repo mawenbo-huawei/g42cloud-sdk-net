@@ -37,6 +37,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public string Endpoint { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -38,6 +38,11 @@ namespace G42Cloud.SDK.Ims.V2.Model
             /// </summary>
             public static readonly TypeEnum IRONIC = new TypeEnum("Ironic");
 
+            /// <summary>
+            /// Enum ISOIMAGE for value: IsoImage
+            /// </summary>
+            public static readonly TypeEnum ISOIMAGE = new TypeEnum("IsoImage");
+
             private static readonly Dictionary<string, TypeEnum> StaticFields =
             new Dictionary<string, TypeEnum>()
             {
@@ -45,6 +50,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
                 { "BMS", BMS },
                 { "FusionCompute", FUSIONCOMPUTE },
                 { "Ironic", IRONIC },
+                { "IsoImage", ISOIMAGE },
             };
 
             private string _value;
@@ -301,6 +307,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public ArchitectureEnum Architecture { get; set; }
         [JsonProperty("volume_id", NullValueHandling = NullValueHandling.Ignore)]
         public string VolumeId { get; set; }
+
 
 
         /// <summary>

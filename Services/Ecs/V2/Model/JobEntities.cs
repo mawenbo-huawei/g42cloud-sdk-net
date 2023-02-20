@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public int? SubJobsTotal { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

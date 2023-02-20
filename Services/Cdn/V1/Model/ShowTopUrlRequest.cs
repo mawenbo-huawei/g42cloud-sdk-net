@@ -261,6 +261,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         [JsonProperty("stat_type", NullValueHandling = NullValueHandling.Ignore)]
         public StatTypeEnum StatType { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

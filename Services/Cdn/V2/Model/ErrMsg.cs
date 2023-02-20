@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cdn.V2.Model
         public string ErrorMsg { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

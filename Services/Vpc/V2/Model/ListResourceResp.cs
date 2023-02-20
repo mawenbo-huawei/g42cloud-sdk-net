@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public List<ResourceTag> Tags { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

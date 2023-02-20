@@ -77,6 +77,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public string OsVolumeReplicationextendedStatus { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

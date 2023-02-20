@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public Object Version { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

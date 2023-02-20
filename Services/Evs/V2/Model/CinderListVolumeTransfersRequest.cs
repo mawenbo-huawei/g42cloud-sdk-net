@@ -25,6 +25,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public int? Offset { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

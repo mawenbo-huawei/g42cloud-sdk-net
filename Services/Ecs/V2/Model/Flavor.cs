@@ -62,6 +62,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public ServerAttachableQuantity AttachableQuantity { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public TopicAttribute Attributes { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

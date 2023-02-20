@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public List<QuotaInfo> Resources { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

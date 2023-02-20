@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public List<StorageGroups> StorageGroups { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

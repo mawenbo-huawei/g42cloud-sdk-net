@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
         public bool? AlarmEnabled { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

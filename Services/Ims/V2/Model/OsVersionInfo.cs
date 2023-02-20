@@ -32,6 +32,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public string OsType { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

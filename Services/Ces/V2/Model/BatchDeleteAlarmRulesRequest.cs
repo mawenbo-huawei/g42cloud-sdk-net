@@ -25,6 +25,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
         public BatchDeleteAlarmsRequestBody Body { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

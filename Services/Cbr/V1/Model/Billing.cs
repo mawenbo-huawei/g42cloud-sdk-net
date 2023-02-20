@@ -853,6 +853,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public string FrozenScene { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

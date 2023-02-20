@@ -38,6 +38,7 @@ namespace G42Cloud.SDK.Ces.V1.Model
         public string Unit { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

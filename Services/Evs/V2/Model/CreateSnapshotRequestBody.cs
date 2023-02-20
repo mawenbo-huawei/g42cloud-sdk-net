@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public CreateSnapshotOption Snapshot { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

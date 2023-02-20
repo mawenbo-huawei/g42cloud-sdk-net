@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public BatchStopServersOption OsStop { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

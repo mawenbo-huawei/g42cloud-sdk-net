@@ -1745,6 +1745,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         [JsonProperty("architecture", NullValueHandling = NullValueHandling.Ignore)]
         public ArchitectureEnum Architecture { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

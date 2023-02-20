@@ -163,6 +163,7 @@ namespace G42Cloud.SDK.Ims.V2.Model
         public JobProgressEntities Entities { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

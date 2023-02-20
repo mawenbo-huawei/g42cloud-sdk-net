@@ -33,6 +33,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public string Platform { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

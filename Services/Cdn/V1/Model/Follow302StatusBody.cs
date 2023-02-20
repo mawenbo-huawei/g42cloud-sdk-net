@@ -133,6 +133,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         [JsonProperty("follow_status", NullValueHandling = NullValueHandling.Ignore)]
         public FollowStatusEnum FollowStatus { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public string ServerGroupReference { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

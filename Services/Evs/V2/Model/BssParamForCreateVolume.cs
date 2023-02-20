@@ -472,6 +472,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         [JsonProperty("periodType", NullValueHandling = NullValueHandling.Ignore)]
         public PeriodTypeEnum PeriodType { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

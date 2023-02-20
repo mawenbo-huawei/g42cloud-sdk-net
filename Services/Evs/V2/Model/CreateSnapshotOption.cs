@@ -32,6 +32,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public string Name { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

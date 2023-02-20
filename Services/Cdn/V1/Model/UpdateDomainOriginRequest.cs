@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public OriginRequest Body { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

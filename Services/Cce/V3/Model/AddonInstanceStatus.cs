@@ -196,6 +196,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public Versions CurrentVersion { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -32,6 +32,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
         public CreateLoadBalancerBandwidthOption Bandwidth { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -41,6 +41,7 @@ namespace G42Cloud.SDK.Vpc.V3.Model
         public List<SecurityGroupRule> SecurityGroupRules { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

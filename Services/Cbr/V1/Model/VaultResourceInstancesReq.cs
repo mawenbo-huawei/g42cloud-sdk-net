@@ -273,6 +273,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("object_type", NullValueHandling = NullValueHandling.Ignore)]
         public ObjectTypeEnum ObjectType { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

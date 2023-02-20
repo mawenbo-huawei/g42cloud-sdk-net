@@ -130,6 +130,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         [JsonProperty("range_status", NullValueHandling = NullValueHandling.Ignore)]
         public RangeStatusEnum RangeStatus { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

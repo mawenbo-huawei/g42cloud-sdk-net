@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public NeutronCreateSecurityGroupRuleOption SecurityGroupRule { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

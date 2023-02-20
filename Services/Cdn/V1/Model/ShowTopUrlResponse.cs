@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public List<TopUrlSummary> TopUrlSummary { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -130,6 +130,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         [JsonProperty("chargingMode", NullValueHandling = NullValueHandling.Ignore)]
         public ChargingModeEnum ChargingMode { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

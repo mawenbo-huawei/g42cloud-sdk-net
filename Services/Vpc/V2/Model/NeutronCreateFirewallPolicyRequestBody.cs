@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public NeutronCreateFirewallPolicyOption FirewallPolicy { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

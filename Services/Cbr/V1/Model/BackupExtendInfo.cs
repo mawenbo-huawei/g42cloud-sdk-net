@@ -163,6 +163,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public bool? SystemDisk { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -124,6 +124,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         [JsonProperty("monitorMetrics", NullValueHandling = NullValueHandling.Ignore)]
         public MonitorMetricsEnum MonitorMetrics { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

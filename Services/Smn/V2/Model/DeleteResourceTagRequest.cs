@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public string Key { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public List<VirtualSpace> VirtualSpaces { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

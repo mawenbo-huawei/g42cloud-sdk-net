@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public RollbackInfo Rollback { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

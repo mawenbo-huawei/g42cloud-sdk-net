@@ -25,6 +25,7 @@ namespace G42Cloud.SDK.Vpc.V3.Model
         public RemoveVpcExtendCidrRequestBody Body { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

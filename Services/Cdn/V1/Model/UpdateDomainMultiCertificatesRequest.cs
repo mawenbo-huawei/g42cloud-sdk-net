@@ -25,6 +25,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public UpdateDomainMultiCertificatesRequestBody Body { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

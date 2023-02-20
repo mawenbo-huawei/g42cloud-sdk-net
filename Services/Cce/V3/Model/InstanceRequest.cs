@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public InstanceRequestSpec Spec { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

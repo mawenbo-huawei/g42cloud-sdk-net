@@ -35,6 +35,7 @@ namespace G42Cloud.SDK.Vpc.V2.Model
         public int? TotalIps { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

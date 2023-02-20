@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cdn.V2.Model
         public Dictionary<string, Object> Result { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

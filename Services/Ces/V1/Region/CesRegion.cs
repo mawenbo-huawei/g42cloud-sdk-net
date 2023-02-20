@@ -6,7 +6,8 @@ namespace G42Cloud.SDK.Ces.V1
 {
     public class CesRegion
     {
-        public static readonly Region AE_AD_1 = new Region("ae-ad-1", "https://ces.ae-ad-1.g42cloud.com");
+        public static readonly Region AE_AD_1 = new Region("ae-ad-1",
+            "https://ces.ae-ad-1.g42cloud.com");
         
         private static readonly Dictionary<string, Region> StaticFields = new Dictionary<string, Region>()
         {

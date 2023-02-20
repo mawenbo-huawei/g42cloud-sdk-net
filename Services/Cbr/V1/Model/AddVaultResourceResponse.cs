@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public List<string> AddResourceIds { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

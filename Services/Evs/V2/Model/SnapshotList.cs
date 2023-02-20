@@ -59,6 +59,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public string ServiceType { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

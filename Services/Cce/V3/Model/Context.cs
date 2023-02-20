@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public string User { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

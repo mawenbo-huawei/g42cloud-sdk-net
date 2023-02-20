@@ -29,6 +29,7 @@ namespace G42Cloud.SDK.Cdn.V1.Model
         public Follow302StatusRequest Body { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

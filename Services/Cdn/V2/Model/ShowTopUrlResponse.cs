@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cdn.V2.Model
         public List<Dictionary<string, Object>> TopUrlSummary { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

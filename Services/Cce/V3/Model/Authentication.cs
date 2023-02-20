@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public AuthenticatingProxy AuthenticatingProxy { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

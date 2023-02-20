@@ -71,6 +71,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         public int? ChargingMode { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

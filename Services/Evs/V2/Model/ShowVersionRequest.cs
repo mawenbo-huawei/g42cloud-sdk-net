@@ -137,6 +137,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         [JsonProperty("version", NullValueHandling = NullValueHandling.Ignore)]
         public VersionEnum Version { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

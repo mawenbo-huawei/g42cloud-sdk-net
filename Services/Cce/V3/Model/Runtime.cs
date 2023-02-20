@@ -130,6 +130,7 @@ namespace G42Cloud.SDK.Cce.V3.Model
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public NameEnum Name { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

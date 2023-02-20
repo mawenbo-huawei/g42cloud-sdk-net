@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public List<Tag> Tags { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

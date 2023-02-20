@@ -255,6 +255,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("incremental", NullValueHandling = NullValueHandling.Ignore)]
         public IncrementalEnum Incremental { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>

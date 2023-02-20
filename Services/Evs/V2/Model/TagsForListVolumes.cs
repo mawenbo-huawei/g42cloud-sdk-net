@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public List<string> Values { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

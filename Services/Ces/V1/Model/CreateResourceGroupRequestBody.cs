@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Ces.V1.Model
         public List<CreateResourceGroup> Resources { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

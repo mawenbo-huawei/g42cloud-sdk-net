@@ -21,6 +21,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public string TransferId { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

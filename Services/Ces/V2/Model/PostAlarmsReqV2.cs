@@ -62,6 +62,7 @@ namespace G42Cloud.SDK.Ces.V2.Model
         public string AlarmTemplateId { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

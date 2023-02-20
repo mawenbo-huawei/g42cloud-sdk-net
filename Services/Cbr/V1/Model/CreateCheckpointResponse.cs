@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public CheckpointCreate Checkpoint { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

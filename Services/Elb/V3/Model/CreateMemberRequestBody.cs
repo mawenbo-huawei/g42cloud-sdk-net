@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
         public CreateMemberOption Member { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

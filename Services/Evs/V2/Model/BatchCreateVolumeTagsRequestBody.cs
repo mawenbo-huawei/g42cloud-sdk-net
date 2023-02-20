@@ -127,6 +127,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public List<Tag> Tags { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

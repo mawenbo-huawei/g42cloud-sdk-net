@@ -20,6 +20,7 @@ namespace G42Cloud.SDK.Ecs.V2.Model
         public List<BatchAttachSharableVolumesOption> Serverinfo { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

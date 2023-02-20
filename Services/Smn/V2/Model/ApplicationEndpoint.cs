@@ -32,6 +32,7 @@ namespace G42Cloud.SDK.Smn.V2.Model
         public string Token { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

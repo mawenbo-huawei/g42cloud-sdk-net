@@ -26,6 +26,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         public int? Reserved { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

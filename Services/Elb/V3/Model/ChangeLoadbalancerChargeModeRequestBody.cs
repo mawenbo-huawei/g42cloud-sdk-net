@@ -130,6 +130,7 @@ namespace G42Cloud.SDK.Elb.V3.Model
         public PrepaidChangeChargeModeOption PrepaidOptions { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

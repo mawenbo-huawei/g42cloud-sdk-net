@@ -23,6 +23,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public string Value { get; set; }
 
 
+
         /// <summary>
         /// Get the string
         /// </summary>

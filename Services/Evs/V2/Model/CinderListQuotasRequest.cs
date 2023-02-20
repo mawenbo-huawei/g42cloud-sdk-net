@@ -129,6 +129,7 @@ namespace G42Cloud.SDK.Evs.V2.Model
         [JsonProperty("usage", NullValueHandling = NullValueHandling.Ignore)]
         public UsageEnum Usage { get; set; }
 
+
         /// <summary>
         /// Get the string
         /// </summary>
