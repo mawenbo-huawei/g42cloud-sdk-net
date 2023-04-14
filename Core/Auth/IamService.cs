@@ -82,7 +82,7 @@ namespace G42Cloud.SDK.Core.Auth
             var message = client.InitHttpRequest(request, true);
             try
             {
-                var response = client.DoHttpRequest(message).Result;
+                var response = TaskUtils.RunSync(() => client.DoHttpRequest(message));
                 if ((int)response.StatusCode >= 400)
                 {
                     throw ExceptionUtils.GetException(response);
@@ -105,7 +105,7 @@ namespace G42Cloud.SDK.Core.Auth
             }
             catch (AggregateException aggregateException)
             {
-                throw new ConnectionException(ExceptionUtils.GetMessageFromAggregateException(aggregateException));
+                throw ExceptionUtils.HandleException(aggregateException);
             }
         }
 
@@ -129,7 +129,7 @@ namespace G42Cloud.SDK.Core.Auth
             var message = client.InitHttpRequest(request, true);
             try
             {
-                var response = client.DoHttpRequest(message).Result;
+                var response = TaskUtils.RunSync(() => client.DoHttpRequest(message));
                 if ((int)response.StatusCode >= 400)
                 {
                     throw ExceptionUtils.GetException(response);
@@ -148,7 +148,7 @@ namespace G42Cloud.SDK.Core.Auth
             }
             catch (AggregateException aggregateException)
             {
-                throw new ConnectionException(ExceptionUtils.GetMessageFromAggregateException(aggregateException));
+                throw ExceptionUtils.HandleException(aggregateException);
             }
         }
     }

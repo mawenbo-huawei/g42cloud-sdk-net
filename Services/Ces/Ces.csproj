@@ -15,7 +15,7 @@
         <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
         <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
         <PackageId>G42Cloud.SDK.Ces</PackageId>
-        <Version>0.0.4-beta</Version>
+        <Version>0.0.5-beta</Version>
         <Authors>G42Cloud</Authors>
         <Copyright>Copyright 2020 G42 Technologies Co., Ltd.</Copyright>
         <Company>G42 Technologies Co., Ltd.</Company>
