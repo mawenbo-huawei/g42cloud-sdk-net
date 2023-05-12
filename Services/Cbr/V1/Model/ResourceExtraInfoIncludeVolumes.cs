@@ -11,13 +11,16 @@ using G42Cloud.SDK.Core;
 namespace G42Cloud.SDK.Cbr.V1.Model
 {
     /// <summary>
-    /// Response Object
+    /// 
     /// </summary>
-    public class ImportBackupResponse : SdkResponse
+    public class ResourceExtraInfoIncludeVolumes 
     {
 
-        [JsonProperty("sync", NullValueHandling = NullValueHandling.Ignore)]
-        public List<BackupSyncRespBody> Sync { get; set; }
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
+        public string Id { get; set; }
+
+        [JsonProperty("os_version", NullValueHandling = NullValueHandling.Ignore)]
+        public string OsVersion { get; set; }
 
 
 
@@ -27,8 +30,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ImportBackupResponse {\n");
-            sb.Append("  sync: ").Append(Sync).Append("\n");
+            sb.Append("class ResourceExtraInfoIncludeVolumes {\n");
+            sb.Append("  id: ").Append(Id).Append("\n");
+            sb.Append("  osVersion: ").Append(OsVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -38,23 +42,27 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ImportBackupResponse);
+            return this.Equals(input as ResourceExtraInfoIncludeVolumes);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(ImportBackupResponse input)
+        public bool Equals(ResourceExtraInfoIncludeVolumes input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Sync == input.Sync ||
-                    this.Sync != null &&
-                    input.Sync != null &&
-                    this.Sync.SequenceEqual(input.Sync)
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.OsVersion == input.OsVersion ||
+                    (this.OsVersion != null &&
+                    this.OsVersion.Equals(input.OsVersion))
                 );
         }
 
@@ -66,8 +74,10 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Sync != null)
-                    hashCode = hashCode * 59 + this.Sync.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.OsVersion != null)
+                    hashCode = hashCode * 59 + this.OsVersion.GetHashCode();
                 return hashCode;
             }
         }

@@ -8,16 +8,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using G42Cloud.SDK.Core;
 
-namespace G42Cloud.SDK.Cbr.V1.Model
+namespace G42Cloud.SDK.Ecs.V2.Model
 {
     /// <summary>
-    /// Response Object
+    ///  
     /// </summary>
-    public class CopyBackupResponse : SdkResponse
+    public class NovaAttachInterfaceFixedIp 
     {
 
-        [JsonProperty("replication", NullValueHandling = NullValueHandling.Ignore)]
-        public BackupReplicateRespBody Replication { get; set; }
+        [JsonProperty("ip_address", NullValueHandling = NullValueHandling.Ignore)]
+        public string IpAddress { get; set; }
 
 
 
@@ -27,8 +27,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CopyBackupResponse {\n");
-            sb.Append("  replication: ").Append(Replication).Append("\n");
+            sb.Append("class NovaAttachInterfaceFixedIp {\n");
+            sb.Append("  ipAddress: ").Append(IpAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -38,22 +38,22 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CopyBackupResponse);
+            return this.Equals(input as NovaAttachInterfaceFixedIp);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(CopyBackupResponse input)
+        public bool Equals(NovaAttachInterfaceFixedIp input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Replication == input.Replication ||
-                    (this.Replication != null &&
-                    this.Replication.Equals(input.Replication))
+                    this.IpAddress == input.IpAddress ||
+                    (this.IpAddress != null &&
+                    this.IpAddress.Equals(input.IpAddress))
                 );
         }
 
@@ -65,8 +65,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Replication != null)
-                    hashCode = hashCode * 59 + this.Replication.GetHashCode();
+                if (this.IpAddress != null)
+                    hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
                 return hashCode;
             }
         }

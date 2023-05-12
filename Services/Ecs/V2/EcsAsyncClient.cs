@@ -343,6 +343,16 @@ namespace G42Cloud.SDK.Ecs.V2
             return JsonUtils.DeSerializeNull<NovaAssociateSecurityGroupResponse>(response);
         }
         
+        public async Task<NovaAttachInterfaceResponse> NovaAttachInterfaceAsync(NovaAttachInterfaceRequest novaAttachInterfaceRequest)
+        {
+            Dictionary<string, string> urlParam = new Dictionary<string, string>();
+            urlParam.Add("server_id" , novaAttachInterfaceRequest.ServerId.ToString());
+            string urlPath = HttpUtils.AddUrlPath("/v2.1/{project_id}/servers/{server_id}/os-interface",urlParam);
+            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", novaAttachInterfaceRequest);
+            HttpResponseMessage response = await DoHttpRequestAsync("POST",request);
+            return JsonUtils.DeSerialize<NovaAttachInterfaceResponse>(response);
+        }
+        
         public async Task<NovaCreateKeypairResponse> NovaCreateKeypairAsync(NovaCreateKeypairRequest novaCreateKeypairRequest)
         {
             Dictionary<string, string> urlParam = new Dictionary<string, string>();

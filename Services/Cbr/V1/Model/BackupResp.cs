@@ -15,228 +15,6 @@ namespace G42Cloud.SDK.Cbr.V1.Model
     /// </summary>
     public class BackupResp 
     {
-        [JsonConverter(typeof(EnumClassConverter<ImageTypeEnum>))]
-        public class ImageTypeEnum
-        {
-            /// <summary>
-            /// Enum BACKUP for value: backup
-            /// </summary>
-            public static readonly ImageTypeEnum BACKUP = new ImageTypeEnum("backup");
-
-            /// <summary>
-            /// Enum REPLICATION for value: replication
-            /// </summary>
-            public static readonly ImageTypeEnum REPLICATION = new ImageTypeEnum("replication");
-
-            private static readonly Dictionary<string, ImageTypeEnum> StaticFields =
-            new Dictionary<string, ImageTypeEnum>()
-            {
-                { "backup", BACKUP },
-                { "replication", REPLICATION },
-            };
-
-            private string _value;
-
-            public ImageTypeEnum()
-            {
-
-            }
-
-            public ImageTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ImageTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ImageTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ImageTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ImageTypeEnum a, ImageTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ImageTypeEnum a, ImageTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<ResourceTypeEnum>))]
-        public class ResourceTypeEnum
-        {
-            /// <summary>
-            /// Enum OS_NOVA_SERVER for value: OS::Nova::Server
-            /// </summary>
-            public static readonly ResourceTypeEnum OS_NOVA_SERVER = new ResourceTypeEnum("OS::Nova::Server");
-
-            /// <summary>
-            /// Enum OS_CINDER_VOLUME for value: OS::Cinder::Volume
-            /// </summary>
-            public static readonly ResourceTypeEnum OS_CINDER_VOLUME = new ResourceTypeEnum("OS::Cinder::Volume");
-
-            private static readonly Dictionary<string, ResourceTypeEnum> StaticFields =
-            new Dictionary<string, ResourceTypeEnum>()
-            {
-                { "OS::Nova::Server", OS_NOVA_SERVER },
-                { "OS::Cinder::Volume", OS_CINDER_VOLUME },
-            };
-
-            private string _value;
-
-            public ResourceTypeEnum()
-            {
-
-            }
-
-            public ResourceTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ResourceTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ResourceTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ResourceTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ResourceTypeEnum a, ResourceTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ResourceTypeEnum a, ResourceTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
         [JsonConverter(typeof(EnumClassConverter<StatusEnum>))]
         public class StatusEnum
         {
@@ -404,7 +182,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public string Id { get; set; }
 
         [JsonProperty("image_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ImageTypeEnum ImageType { get; set; }
+        public string ImageType { get; set; }
+
         [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
@@ -430,7 +209,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public int? ResourceSize { get; set; }
 
         [JsonProperty("resource_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ResourceTypeEnum ResourceType { get; set; }
+        public string ResourceType { get; set; }
+
         [JsonProperty("status", NullValueHandling = NullValueHandling.Ignore)]
         public StatusEnum Status { get; set; }
         [JsonProperty("updated_at", NullValueHandling = NullValueHandling.Ignore)]

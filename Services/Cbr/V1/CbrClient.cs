@@ -54,25 +54,6 @@ namespace G42Cloud.SDK.Cbr.V1
             return JsonUtils.DeSerializeNull<BatchCreateAndDeleteVaultTagsResponse>(response);
         }
         
-        public CopyBackupResponse CopyBackup(CopyBackupRequest copyBackupRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            urlParam.Add("backup_id" , copyBackupRequest.BackupId.ToString());
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/backups/{backup_id}/replicate",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", copyBackupRequest);
-            HttpResponseMessage response = DoHttpRequestSync("POST",request);
-            return JsonUtils.DeSerialize<CopyBackupResponse>(response);
-        }
-        
-        public CopyCheckpointResponse CopyCheckpoint(CopyCheckpointRequest copyCheckpointRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/checkpoints/replicate",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", copyCheckpointRequest);
-            HttpResponseMessage response = DoHttpRequestSync("POST",request);
-            return JsonUtils.DeSerialize<CopyCheckpointResponse>(response);
-        }
-        
         public CreateCheckpointResponse CreateCheckpoint(CreateCheckpointRequest createCheckpointRequest)
         {
             Dictionary<string, string> urlParam = new Dictionary<string, string>();
@@ -172,15 +153,6 @@ namespace G42Cloud.SDK.Cbr.V1
             return JsonUtils.DeSerialize<DisassociateVaultPolicyResponse>(response);
         }
         
-        public ImportBackupResponse ImportBackup(ImportBackupRequest importBackupRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/backups/sync",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", importBackupRequest);
-            HttpResponseMessage response = DoHttpRequestSync("POST",request);
-            return JsonUtils.DeSerialize<ImportBackupResponse>(response);
-        }
-        
         public ListBackupsResponse ListBackups(ListBackupsRequest listBackupsRequest)
         {
             Dictionary<string, string> urlParam = new Dictionary<string, string>();
@@ -225,16 +197,6 @@ namespace G42Cloud.SDK.Cbr.V1
             SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", listVaultRequest);
             HttpResponseMessage response = DoHttpRequestSync("GET",request);
             return JsonUtils.DeSerialize<ListVaultResponse>(response);
-        }
-        
-        public MigrateVaultResourceResponse MigrateVaultResource(MigrateVaultResourceRequest migrateVaultResourceRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            urlParam.Add("vault_id" , migrateVaultResourceRequest.VaultId.ToString());
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/vaults/{vault_id}/migrateresources",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", migrateVaultResourceRequest);
-            HttpResponseMessage response = DoHttpRequestSync("POST",request);
-            return JsonUtils.DeSerialize<MigrateVaultResourceResponse>(response);
         }
         
         public RemoveVaultResourceResponse RemoveVaultResource(RemoveVaultResourceRequest removeVaultResourceRequest)
@@ -327,15 +289,6 @@ namespace G42Cloud.SDK.Cbr.V1
             SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", showProtectableRequest);
             HttpResponseMessage response = DoHttpRequestSync("GET",request);
             return JsonUtils.DeSerialize<ShowProtectableResponse>(response);
-        }
-        
-        public ShowReplicationCapabilitiesResponse ShowReplicationCapabilities(ShowReplicationCapabilitiesRequest showReplicationCapabilitiesRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/replication-capabilities",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", showReplicationCapabilitiesRequest);
-            HttpResponseMessage response = DoHttpRequestSync("GET",request);
-            return JsonUtils.DeSerialize<ShowReplicationCapabilitiesResponse>(response);
         }
         
         public ShowVaultResponse ShowVault(ShowVaultRequest showVaultRequest)

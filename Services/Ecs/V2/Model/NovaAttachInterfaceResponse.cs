@@ -8,16 +8,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using G42Cloud.SDK.Core;
 
-namespace G42Cloud.SDK.Cbr.V1.Model
+namespace G42Cloud.SDK.Ecs.V2.Model
 {
     /// <summary>
-    /// 
+    /// Response Object
     /// </summary>
-    public class BackupReplicateReq 
+    public class NovaAttachInterfaceResponse : SdkResponse
     {
 
-        [JsonProperty("replicate", NullValueHandling = NullValueHandling.Ignore)]
-        public BackupReplicateReqBody Replicate { get; set; }
+        [JsonProperty("interfaceAttachment", NullValueHandling = NullValueHandling.Ignore)]
+        public NovaServerInterfaceDetail InterfaceAttachment { get; set; }
 
 
 
@@ -27,8 +27,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BackupReplicateReq {\n");
-            sb.Append("  replicate: ").Append(Replicate).Append("\n");
+            sb.Append("class NovaAttachInterfaceResponse {\n");
+            sb.Append("  interfaceAttachment: ").Append(InterfaceAttachment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -38,22 +38,22 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BackupReplicateReq);
+            return this.Equals(input as NovaAttachInterfaceResponse);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(BackupReplicateReq input)
+        public bool Equals(NovaAttachInterfaceResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Replicate == input.Replicate ||
-                    (this.Replicate != null &&
-                    this.Replicate.Equals(input.Replicate))
+                    this.InterfaceAttachment == input.InterfaceAttachment ||
+                    (this.InterfaceAttachment != null &&
+                    this.InterfaceAttachment.Equals(input.InterfaceAttachment))
                 );
         }
 
@@ -65,8 +65,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Replicate != null)
-                    hashCode = hashCode * 59 + this.Replicate.GetHashCode();
+                if (this.InterfaceAttachment != null)
+                    hashCode = hashCode * 59 + this.InterfaceAttachment.GetHashCode();
                 return hashCode;
             }
         }

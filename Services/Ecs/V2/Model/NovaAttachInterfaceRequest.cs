@@ -8,17 +8,21 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using G42Cloud.SDK.Core;
 
-namespace G42Cloud.SDK.Cbr.V1.Model
+namespace G42Cloud.SDK.Ecs.V2.Model
 {
     /// <summary>
     /// Request Object
     /// </summary>
-    public class CopyCheckpointRequest 
+    public class NovaAttachInterfaceRequest 
     {
+
+        [SDKProperty("server_id", IsPath = true)]
+        [JsonProperty("server_id", NullValueHandling = NullValueHandling.Ignore)]
+        public string ServerId { get; set; }
 
         [SDKProperty("body", IsBody = true)]
         [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
-        public CheckpointReplicateReq Body { get; set; }
+        public NovaAttachInterfaceRequestBody Body { get; set; }
 
 
 
@@ -28,7 +32,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CopyCheckpointRequest {\n");
+            sb.Append("class NovaAttachInterfaceRequest {\n");
+            sb.Append("  serverId: ").Append(ServerId).Append("\n");
             sb.Append("  body: ").Append(Body).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -39,18 +44,23 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CopyCheckpointRequest);
+            return this.Equals(input as NovaAttachInterfaceRequest);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(CopyCheckpointRequest input)
+        public bool Equals(NovaAttachInterfaceRequest input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.ServerId == input.ServerId ||
+                    (this.ServerId != null &&
+                    this.ServerId.Equals(input.ServerId))
+                ) && 
                 (
                     this.Body == input.Body ||
                     (this.Body != null &&
@@ -66,6 +76,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.ServerId != null)
+                    hashCode = hashCode * 59 + this.ServerId.GetHashCode();
                 if (this.Body != null)
                     hashCode = hashCode * 59 + this.Body.GetHashCode();
                 return hashCode;

@@ -162,6 +162,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("system_disk", NullValueHandling = NullValueHandling.Ignore)]
         public bool? SystemDisk { get; set; }
 
+        [JsonProperty("is_multi_az", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? IsMultiAz { get; set; }
+
 
 
         /// <summary>
@@ -181,6 +184,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             sb.Append("  containSystemDisk: ").Append(ContainSystemDisk).Append("\n");
             sb.Append("  encrypted: ").Append(Encrypted).Append("\n");
             sb.Append("  systemDisk: ").Append(SystemDisk).Append("\n");
+            sb.Append("  isMultiAz: ").Append(IsMultiAz).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -252,6 +256,11 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     this.SystemDisk == input.SystemDisk ||
                     (this.SystemDisk != null &&
                     this.SystemDisk.Equals(input.SystemDisk))
+                ) && 
+                (
+                    this.IsMultiAz == input.IsMultiAz ||
+                    (this.IsMultiAz != null &&
+                    this.IsMultiAz.Equals(input.IsMultiAz))
                 );
         }
 
@@ -283,6 +292,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     hashCode = hashCode * 59 + this.Encrypted.GetHashCode();
                 if (this.SystemDisk != null)
                     hashCode = hashCode * 59 + this.SystemDisk.GetHashCode();
+                if (this.IsMultiAz != null)
+                    hashCode = hashCode * 59 + this.IsMultiAz.GetHashCode();
                 return hashCode;
             }
         }

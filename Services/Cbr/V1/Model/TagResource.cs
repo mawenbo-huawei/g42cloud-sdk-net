@@ -20,7 +20,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public string ResourceId { get; set; }
 
         [JsonProperty("resource_detail", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Vault> ResourceDetail { get; set; }
+        public InstancesResourceDetail ResourceDetail { get; set; }
 
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
         public List<Tag> Tags { get; set; }
@@ -73,9 +73,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                 ) && 
                 (
                     this.ResourceDetail == input.ResourceDetail ||
-                    this.ResourceDetail != null &&
-                    input.ResourceDetail != null &&
-                    this.ResourceDetail.SequenceEqual(input.ResourceDetail)
+                    (this.ResourceDetail != null &&
+                    this.ResourceDetail.Equals(input.ResourceDetail))
                 ) && 
                 (
                     this.Tags == input.Tags ||

@@ -34,6 +34,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("resource_details", NullValueHandling = NullValueHandling.Ignore)]
         public List<Resource> ResourceDetails { get; set; }
 
+        [JsonProperty("policy_id", NullValueHandling = NullValueHandling.Ignore)]
+        public string PolicyId { get; set; }
+
 
 
         /// <summary>
@@ -49,6 +52,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             sb.Append("  name: ").Append(Name).Append("\n");
             sb.Append("  resources: ").Append(Resources).Append("\n");
             sb.Append("  resourceDetails: ").Append(ResourceDetails).Append("\n");
+            sb.Append("  policyId: ").Append(PolicyId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -101,6 +105,11 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     this.ResourceDetails != null &&
                     input.ResourceDetails != null &&
                     this.ResourceDetails.SequenceEqual(input.ResourceDetails)
+                ) && 
+                (
+                    this.PolicyId == input.PolicyId ||
+                    (this.PolicyId != null &&
+                    this.PolicyId.Equals(input.PolicyId))
                 );
         }
 
@@ -124,6 +133,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     hashCode = hashCode * 59 + this.Resources.GetHashCode();
                 if (this.ResourceDetails != null)
                     hashCode = hashCode * 59 + this.ResourceDetails.GetHashCode();
+                if (this.PolicyId != null)
+                    hashCode = hashCode * 59 + this.PolicyId.GetHashCode();
                 return hashCode;
             }
         }

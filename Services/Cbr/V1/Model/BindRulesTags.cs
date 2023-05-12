@@ -11,14 +11,16 @@ using G42Cloud.SDK.Core;
 namespace G42Cloud.SDK.Cbr.V1.Model
 {
     /// <summary>
-    /// Request Object
+    /// 自动绑定规则标签
     /// </summary>
-    public class ImportBackupRequest 
+    public class BindRulesTags 
     {
 
-        [SDKProperty("body", IsBody = true)]
-        [JsonProperty("body", NullValueHandling = NullValueHandling.Ignore)]
-        public BackupSyncReq Body { get; set; }
+        [JsonProperty("key", NullValueHandling = NullValueHandling.Ignore)]
+        public string Key { get; set; }
+
+        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
+        public string Value { get; set; }
 
 
 
@@ -28,8 +30,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ImportBackupRequest {\n");
-            sb.Append("  body: ").Append(Body).Append("\n");
+            sb.Append("class BindRulesTags {\n");
+            sb.Append("  key: ").Append(Key).Append("\n");
+            sb.Append("  value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -39,22 +42,27 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ImportBackupRequest);
+            return this.Equals(input as BindRulesTags);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(ImportBackupRequest input)
+        public bool Equals(BindRulesTags input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Body == input.Body ||
-                    (this.Body != null &&
-                    this.Body.Equals(input.Body))
+                    this.Key == input.Key ||
+                    (this.Key != null &&
+                    this.Key.Equals(input.Key))
+                ) && 
+                (
+                    this.Value == input.Value ||
+                    (this.Value != null &&
+                    this.Value.Equals(input.Value))
                 );
         }
 
@@ -66,8 +74,10 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Body != null)
-                    hashCode = hashCode * 59 + this.Body.GetHashCode();
+                if (this.Key != null)
+                    hashCode = hashCode * 59 + this.Key.GetHashCode();
+                if (this.Value != null)
+                    hashCode = hashCode * 59 + this.Value.GetHashCode();
                 return hashCode;
             }
         }

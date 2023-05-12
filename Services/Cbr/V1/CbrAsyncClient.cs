@@ -55,25 +55,6 @@ namespace G42Cloud.SDK.Cbr.V1
             return JsonUtils.DeSerializeNull<BatchCreateAndDeleteVaultTagsResponse>(response);
         }
         
-        public async Task<CopyBackupResponse> CopyBackupAsync(CopyBackupRequest copyBackupRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            urlParam.Add("backup_id" , copyBackupRequest.BackupId.ToString());
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/backups/{backup_id}/replicate",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", copyBackupRequest);
-            HttpResponseMessage response = await DoHttpRequestAsync("POST",request);
-            return JsonUtils.DeSerialize<CopyBackupResponse>(response);
-        }
-        
-        public async Task<CopyCheckpointResponse> CopyCheckpointAsync(CopyCheckpointRequest copyCheckpointRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/checkpoints/replicate",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", copyCheckpointRequest);
-            HttpResponseMessage response = await DoHttpRequestAsync("POST",request);
-            return JsonUtils.DeSerialize<CopyCheckpointResponse>(response);
-        }
-        
         public async Task<CreateCheckpointResponse> CreateCheckpointAsync(CreateCheckpointRequest createCheckpointRequest)
         {
             Dictionary<string, string> urlParam = new Dictionary<string, string>();
@@ -173,15 +154,6 @@ namespace G42Cloud.SDK.Cbr.V1
             return JsonUtils.DeSerialize<DisassociateVaultPolicyResponse>(response);
         }
         
-        public async Task<ImportBackupResponse> ImportBackupAsync(ImportBackupRequest importBackupRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/backups/sync",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", importBackupRequest);
-            HttpResponseMessage response = await DoHttpRequestAsync("POST",request);
-            return JsonUtils.DeSerialize<ImportBackupResponse>(response);
-        }
-        
         public async Task<ListBackupsResponse> ListBackupsAsync(ListBackupsRequest listBackupsRequest)
         {
             Dictionary<string, string> urlParam = new Dictionary<string, string>();
@@ -226,16 +198,6 @@ namespace G42Cloud.SDK.Cbr.V1
             SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", listVaultRequest);
             HttpResponseMessage response = await DoHttpRequestAsync("GET",request);
             return JsonUtils.DeSerialize<ListVaultResponse>(response);
-        }
-        
-        public async Task<MigrateVaultResourceResponse> MigrateVaultResourceAsync(MigrateVaultResourceRequest migrateVaultResourceRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            urlParam.Add("vault_id" , migrateVaultResourceRequest.VaultId.ToString());
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/vaults/{vault_id}/migrateresources",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json;charset=UTF-8", migrateVaultResourceRequest);
-            HttpResponseMessage response = await DoHttpRequestAsync("POST",request);
-            return JsonUtils.DeSerialize<MigrateVaultResourceResponse>(response);
         }
         
         public async Task<RemoveVaultResourceResponse> RemoveVaultResourceAsync(RemoveVaultResourceRequest removeVaultResourceRequest)
@@ -328,15 +290,6 @@ namespace G42Cloud.SDK.Cbr.V1
             SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", showProtectableRequest);
             HttpResponseMessage response = await DoHttpRequestAsync("GET",request);
             return JsonUtils.DeSerialize<ShowProtectableResponse>(response);
-        }
-        
-        public async Task<ShowReplicationCapabilitiesResponse> ShowReplicationCapabilitiesAsync(ShowReplicationCapabilitiesRequest showReplicationCapabilitiesRequest)
-        {
-            Dictionary<string, string> urlParam = new Dictionary<string, string>();
-            string urlPath = HttpUtils.AddUrlPath("/v3/{project_id}/replication-capabilities",urlParam);
-            SdkRequest request = HttpUtils.InitSdkRequest(urlPath, "application/json", showReplicationCapabilitiesRequest);
-            HttpResponseMessage response = await DoHttpRequestAsync("GET",request);
-            return JsonUtils.DeSerialize<ShowReplicationCapabilitiesResponse>(response);
         }
         
         public async Task<ShowVaultResponse> ShowVaultAsync(ShowVaultRequest showVaultRequest)

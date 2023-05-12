@@ -11,13 +11,13 @@ using G42Cloud.SDK.Core;
 namespace G42Cloud.SDK.Cbr.V1.Model
 {
     /// <summary>
-    /// Response Object
+    /// 
     /// </summary>
-    public class ShowReplicationCapabilitiesResponse : SdkResponse
+    public class InstancesResourceDetail 
     {
 
-        [JsonProperty("regions", NullValueHandling = NullValueHandling.Ignore)]
-        public List<ProtectableReplicationCapabilitiesRespRegion> Regions { get; set; }
+        [JsonProperty("vault", NullValueHandling = NullValueHandling.Ignore)]
+        public Vault Vault { get; set; }
 
 
 
@@ -27,8 +27,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ShowReplicationCapabilitiesResponse {\n");
-            sb.Append("  regions: ").Append(Regions).Append("\n");
+            sb.Append("class InstancesResourceDetail {\n");
+            sb.Append("  vault: ").Append(Vault).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -38,23 +38,22 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         /// </summary>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ShowReplicationCapabilitiesResponse);
+            return this.Equals(input as InstancesResourceDetail);
         }
 
         /// <summary>
         /// Returns true if objects are equal
         /// </summary>
-        public bool Equals(ShowReplicationCapabilitiesResponse input)
+        public bool Equals(InstancesResourceDetail input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Regions == input.Regions ||
-                    this.Regions != null &&
-                    input.Regions != null &&
-                    this.Regions.SequenceEqual(input.Regions)
+                    this.Vault == input.Vault ||
+                    (this.Vault != null &&
+                    this.Vault.Equals(input.Vault))
                 );
         }
 
@@ -66,8 +65,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Regions != null)
-                    hashCode = hashCode * 59 + this.Regions.GetHashCode();
+                if (this.Vault != null)
+                    hashCode = hashCode * 59 + this.Vault.GetHashCode();
                 return hashCode;
             }
         }

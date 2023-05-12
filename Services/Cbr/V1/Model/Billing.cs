@@ -15,678 +15,6 @@ namespace G42Cloud.SDK.Cbr.V1.Model
     /// </summary>
     public class Billing 
     {
-        [JsonConverter(typeof(EnumClassConverter<ChargingModeEnum>))]
-        public class ChargingModeEnum
-        {
-            /// <summary>
-            /// Enum PRE_PAID for value: pre_paid
-            /// </summary>
-            public static readonly ChargingModeEnum PRE_PAID = new ChargingModeEnum("pre_paid");
-
-            /// <summary>
-            /// Enum POST_PAID for value: post_paid
-            /// </summary>
-            public static readonly ChargingModeEnum POST_PAID = new ChargingModeEnum("post_paid");
-
-            private static readonly Dictionary<string, ChargingModeEnum> StaticFields =
-            new Dictionary<string, ChargingModeEnum>()
-            {
-                { "pre_paid", PRE_PAID },
-                { "post_paid", POST_PAID },
-            };
-
-            private string _value;
-
-            public ChargingModeEnum()
-            {
-
-            }
-
-            public ChargingModeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ChargingModeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ChargingModeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ChargingModeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ChargingModeEnum a, ChargingModeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ChargingModeEnum a, ChargingModeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<CloudTypeEnum>))]
-        public class CloudTypeEnum
-        {
-            /// <summary>
-            /// Enum PUBLIC for value: public
-            /// </summary>
-            public static readonly CloudTypeEnum PUBLIC = new CloudTypeEnum("public");
-
-            /// <summary>
-            /// Enum HYBRID for value: hybrid
-            /// </summary>
-            public static readonly CloudTypeEnum HYBRID = new CloudTypeEnum("hybrid");
-
-            private static readonly Dictionary<string, CloudTypeEnum> StaticFields =
-            new Dictionary<string, CloudTypeEnum>()
-            {
-                { "public", PUBLIC },
-                { "hybrid", HYBRID },
-            };
-
-            private string _value;
-
-            public CloudTypeEnum()
-            {
-
-            }
-
-            public CloudTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static CloudTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as CloudTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(CloudTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(CloudTypeEnum a, CloudTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(CloudTypeEnum a, CloudTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<ConsistentLevelEnum>))]
-        public class ConsistentLevelEnum
-        {
-            /// <summary>
-            /// Enum APP_CONSISTENT for value: app_consistent
-            /// </summary>
-            public static readonly ConsistentLevelEnum APP_CONSISTENT = new ConsistentLevelEnum("app_consistent");
-
-            /// <summary>
-            /// Enum CRASH_CONSISTENT for value: crash_consistent
-            /// </summary>
-            public static readonly ConsistentLevelEnum CRASH_CONSISTENT = new ConsistentLevelEnum("crash_consistent");
-
-            private static readonly Dictionary<string, ConsistentLevelEnum> StaticFields =
-            new Dictionary<string, ConsistentLevelEnum>()
-            {
-                { "app_consistent", APP_CONSISTENT },
-                { "crash_consistent", CRASH_CONSISTENT },
-            };
-
-            private string _value;
-
-            public ConsistentLevelEnum()
-            {
-
-            }
-
-            public ConsistentLevelEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ConsistentLevelEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ConsistentLevelEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ConsistentLevelEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ConsistentLevelEnum a, ConsistentLevelEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ConsistentLevelEnum a, ConsistentLevelEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<ObjectTypeEnum>))]
-        public class ObjectTypeEnum
-        {
-            /// <summary>
-            /// Enum SERVER for value: server
-            /// </summary>
-            public static readonly ObjectTypeEnum SERVER = new ObjectTypeEnum("server");
-
-            /// <summary>
-            /// Enum DISK for value: disk
-            /// </summary>
-            public static readonly ObjectTypeEnum DISK = new ObjectTypeEnum("disk");
-
-            private static readonly Dictionary<string, ObjectTypeEnum> StaticFields =
-            new Dictionary<string, ObjectTypeEnum>()
-            {
-                { "server", SERVER },
-                { "disk", DISK },
-            };
-
-            private string _value;
-
-            public ObjectTypeEnum()
-            {
-
-            }
-
-            public ObjectTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ObjectTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ObjectTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ObjectTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ObjectTypeEnum a, ObjectTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ObjectTypeEnum a, ObjectTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<ProtectTypeEnum>))]
-        public class ProtectTypeEnum
-        {
-            /// <summary>
-            /// Enum BACKUP for value: backup
-            /// </summary>
-            public static readonly ProtectTypeEnum BACKUP = new ProtectTypeEnum("backup");
-
-            /// <summary>
-            /// Enum REPLICATION for value: replication
-            /// </summary>
-            public static readonly ProtectTypeEnum REPLICATION = new ProtectTypeEnum("replication");
-
-            /// <summary>
-            /// Enum HYBRID for value: hybrid
-            /// </summary>
-            public static readonly ProtectTypeEnum HYBRID = new ProtectTypeEnum("hybrid");
-
-            private static readonly Dictionary<string, ProtectTypeEnum> StaticFields =
-            new Dictionary<string, ProtectTypeEnum>()
-            {
-                { "backup", BACKUP },
-                { "replication", REPLICATION },
-                { "hybrid", HYBRID },
-            };
-
-            private string _value;
-
-            public ProtectTypeEnum()
-            {
-
-            }
-
-            public ProtectTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ProtectTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ProtectTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ProtectTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ProtectTypeEnum a, ProtectTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ProtectTypeEnum a, ProtectTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<SpecCodeEnum>))]
-        public class SpecCodeEnum
-        {
-            /// <summary>
-            /// Enum VAULT_BACKUP_SERVER_NORMAL for value: vault.backup.server.normal
-            /// </summary>
-            public static readonly SpecCodeEnum VAULT_BACKUP_SERVER_NORMAL = new SpecCodeEnum("vault.backup.server.normal");
-
-            /// <summary>
-            /// Enum VAULT_BACKUP_VOLUME_NORMAL for value: vault.backup.volume.normal
-            /// </summary>
-            public static readonly SpecCodeEnum VAULT_BACKUP_VOLUME_NORMAL = new SpecCodeEnum("vault.backup.volume.normal");
-
-            private static readonly Dictionary<string, SpecCodeEnum> StaticFields =
-            new Dictionary<string, SpecCodeEnum>()
-            {
-                { "vault.backup.server.normal", VAULT_BACKUP_SERVER_NORMAL },
-                { "vault.backup.volume.normal", VAULT_BACKUP_VOLUME_NORMAL },
-            };
-
-            private string _value;
-
-            public SpecCodeEnum()
-            {
-
-            }
-
-            public SpecCodeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static SpecCodeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as SpecCodeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(SpecCodeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(SpecCodeEnum a, SpecCodeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(SpecCodeEnum a, SpecCodeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
         [JsonConverter(typeof(EnumClassConverter<StatusEnum>))]
         public class StatusEnum
         {
@@ -821,13 +149,17 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public int? Allocated { get; set; }
 
         [JsonProperty("charging_mode", NullValueHandling = NullValueHandling.Ignore)]
-        public ChargingModeEnum ChargingMode { get; set; }
+        public string ChargingMode { get; set; }
+
         [JsonProperty("cloud_type", NullValueHandling = NullValueHandling.Ignore)]
-        public CloudTypeEnum CloudType { get; set; }
+        public string CloudType { get; set; }
+
         [JsonProperty("consistent_level", NullValueHandling = NullValueHandling.Ignore)]
-        public ConsistentLevelEnum ConsistentLevel { get; set; }
+        public string ConsistentLevel { get; set; }
+
         [JsonProperty("object_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ObjectTypeEnum ObjectType { get; set; }
+        public string ObjectType { get; set; }
+
         [JsonProperty("order_id", NullValueHandling = NullValueHandling.Ignore)]
         public string OrderId { get; set; }
 
@@ -835,12 +167,14 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public string ProductId { get; set; }
 
         [JsonProperty("protect_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ProtectTypeEnum ProtectType { get; set; }
+        public string ProtectType { get; set; }
+
         [JsonProperty("size", NullValueHandling = NullValueHandling.Ignore)]
         public int? Size { get; set; }
 
         [JsonProperty("spec_code", NullValueHandling = NullValueHandling.Ignore)]
-        public SpecCodeEnum SpecCode { get; set; }
+        public string SpecCode { get; set; }
+
         [JsonProperty("status", NullValueHandling = NullValueHandling.Ignore)]
         public StatusEnum Status { get; set; }
         [JsonProperty("storage_unit", NullValueHandling = NullValueHandling.Ignore)]
@@ -851,6 +185,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
 
         [JsonProperty("frozen_scene", NullValueHandling = NullValueHandling.Ignore)]
         public string FrozenScene { get; set; }
+
+        [JsonProperty("is_multi_az", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? IsMultiAz { get; set; }
 
 
 
@@ -875,6 +212,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             sb.Append("  storageUnit: ").Append(StorageUnit).Append("\n");
             sb.Append("  used: ").Append(Used).Append("\n");
             sb.Append("  frozenScene: ").Append(FrozenScene).Append("\n");
+            sb.Append("  isMultiAz: ").Append(IsMultiAz).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -965,6 +303,11 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     this.FrozenScene == input.FrozenScene ||
                     (this.FrozenScene != null &&
                     this.FrozenScene.Equals(input.FrozenScene))
+                ) && 
+                (
+                    this.IsMultiAz == input.IsMultiAz ||
+                    (this.IsMultiAz != null &&
+                    this.IsMultiAz.Equals(input.IsMultiAz))
                 );
         }
 
@@ -1004,6 +347,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     hashCode = hashCode * 59 + this.Used.GetHashCode();
                 if (this.FrozenScene != null)
                     hashCode = hashCode * 59 + this.FrozenScene.GetHashCode();
+                if (this.IsMultiAz != null)
+                    hashCode = hashCode * 59 + this.IsMultiAz.GetHashCode();
                 return hashCode;
             }
         }

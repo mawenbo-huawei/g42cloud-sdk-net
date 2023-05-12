@@ -38,7 +38,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public List<ResourceResp> Resources { get; set; }
 
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
-        public List<TagsResp> Tags { get; set; }
+        public List<Tag> Tags { get; set; }
 
         [JsonProperty("enterprise_project_id", NullValueHandling = NullValueHandling.Ignore)]
         public string EnterpriseProjectId { get; set; }

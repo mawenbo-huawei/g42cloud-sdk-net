@@ -15,117 +15,6 @@ namespace G42Cloud.SDK.Cbr.V1.Model
     /// </summary>
     public class PolicyCreate 
     {
-        [JsonConverter(typeof(EnumClassConverter<OperationTypeEnum>))]
-        public class OperationTypeEnum
-        {
-            /// <summary>
-            /// Enum BACKUP for value: backup
-            /// </summary>
-            public static readonly OperationTypeEnum BACKUP = new OperationTypeEnum("backup");
-
-            /// <summary>
-            /// Enum REPLICATION for value: replication
-            /// </summary>
-            public static readonly OperationTypeEnum REPLICATION = new OperationTypeEnum("replication");
-
-            private static readonly Dictionary<string, OperationTypeEnum> StaticFields =
-            new Dictionary<string, OperationTypeEnum>()
-            {
-                { "backup", BACKUP },
-                { "replication", REPLICATION },
-            };
-
-            private string _value;
-
-            public OperationTypeEnum()
-            {
-
-            }
-
-            public OperationTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static OperationTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as OperationTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(OperationTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(OperationTypeEnum a, OperationTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(OperationTypeEnum a, OperationTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
 
         [JsonProperty("enabled", NullValueHandling = NullValueHandling.Ignore)]
         public bool? Enabled { get; set; }
@@ -137,7 +26,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         public PolicyoODCreate OperationDefinition { get; set; }
 
         [JsonProperty("operation_type", NullValueHandling = NullValueHandling.Ignore)]
-        public OperationTypeEnum OperationType { get; set; }
+        public string OperationType { get; set; }
+
         [JsonProperty("trigger", NullValueHandling = NullValueHandling.Ignore)]
         public PolicyTriggerReq Trigger { get; set; }
 

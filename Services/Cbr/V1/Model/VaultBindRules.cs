@@ -17,7 +17,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
     {
 
         [JsonProperty("tags", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Tag> Tags { get; set; }
+        public List<BindRulesTags> Tags { get; set; }
 
 
 

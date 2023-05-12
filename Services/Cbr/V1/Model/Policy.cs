@@ -23,16 +23,10 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             /// </summary>
             public static readonly OperationTypeEnum BACKUP = new OperationTypeEnum("backup");
 
-            /// <summary>
-            /// Enum REPLICATION for value: replication
-            /// </summary>
-            public static readonly OperationTypeEnum REPLICATION = new OperationTypeEnum("replication");
-
             private static readonly Dictionary<string, OperationTypeEnum> StaticFields =
             new Dictionary<string, OperationTypeEnum>()
             {
                 { "backup", BACKUP },
-                { "replication", REPLICATION },
             };
 
             private string _value;

@@ -15,228 +15,6 @@ namespace G42Cloud.SDK.Cbr.V1.Model
     /// </summary>
     public class ListBackupsRequest 
     {
-        [JsonConverter(typeof(EnumClassConverter<ImageTypeEnum>))]
-        public class ImageTypeEnum
-        {
-            /// <summary>
-            /// Enum BACKUP for value: backup
-            /// </summary>
-            public static readonly ImageTypeEnum BACKUP = new ImageTypeEnum("backup");
-
-            /// <summary>
-            /// Enum REPLICATION for value: replication
-            /// </summary>
-            public static readonly ImageTypeEnum REPLICATION = new ImageTypeEnum("replication");
-
-            private static readonly Dictionary<string, ImageTypeEnum> StaticFields =
-            new Dictionary<string, ImageTypeEnum>()
-            {
-                { "backup", BACKUP },
-                { "replication", REPLICATION },
-            };
-
-            private string _value;
-
-            public ImageTypeEnum()
-            {
-
-            }
-
-            public ImageTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ImageTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ImageTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ImageTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ImageTypeEnum a, ImageTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ImageTypeEnum a, ImageTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
-        [JsonConverter(typeof(EnumClassConverter<ResourceTypeEnum>))]
-        public class ResourceTypeEnum
-        {
-            /// <summary>
-            /// Enum OS_CINDER_VOLUME for value: OS::Cinder::Volume
-            /// </summary>
-            public static readonly ResourceTypeEnum OS_CINDER_VOLUME = new ResourceTypeEnum("OS::Cinder::Volume");
-
-            /// <summary>
-            /// Enum OS_NOVA_SERVER for value: OS::Nova::Server
-            /// </summary>
-            public static readonly ResourceTypeEnum OS_NOVA_SERVER = new ResourceTypeEnum("OS::Nova::Server");
-
-            private static readonly Dictionary<string, ResourceTypeEnum> StaticFields =
-            new Dictionary<string, ResourceTypeEnum>()
-            {
-                { "OS::Cinder::Volume", OS_CINDER_VOLUME },
-                { "OS::Nova::Server", OS_NOVA_SERVER },
-            };
-
-            private string _value;
-
-            public ResourceTypeEnum()
-            {
-
-            }
-
-            public ResourceTypeEnum(string value)
-            {
-                _value = value;
-            }
-
-            public static ResourceTypeEnum FromValue(string value)
-            {
-                if(value == null){
-                    return null;
-                }
-
-                if (StaticFields.ContainsKey(value))
-                {
-                    return StaticFields[value];
-                }
-
-                return null;
-            }
-
-            public string GetValue()
-            {
-                return _value;
-            }
-
-            public override string ToString()
-            {
-                return $"{_value}";
-            }
-
-            public override int GetHashCode()
-            {
-                return this._value.GetHashCode();
-            }
-
-            public override bool Equals(object obj)
-            {
-                if (obj == null)
-                {
-                    return false;
-                }
-
-                if (ReferenceEquals(this, obj))
-                {
-                    return true;
-                }
-
-                if (this.Equals(obj as ResourceTypeEnum))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-
-            public bool Equals(ResourceTypeEnum obj)
-            {
-                if ((object)obj == null)
-                {
-                    return false;
-                }
-                return StringComparer.OrdinalIgnoreCase.Equals(this._value, obj.GetValue());
-            }
-
-            public static bool operator ==(ResourceTypeEnum a, ResourceTypeEnum b)
-            {
-                if (System.Object.ReferenceEquals(a, b))
-                {
-                    return true;
-                }
-
-                if ((object)a == null)
-                {
-                    return false;
-                }
-
-                return a.Equals(b);
-            }
-
-            public static bool operator !=(ResourceTypeEnum a, ResourceTypeEnum b)
-            {
-                return !(a == b);
-            }
-        }
-
         [JsonConverter(typeof(EnumClassConverter<StatusEnum>))]
         public class StatusEnum
         {
@@ -633,7 +411,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
 
         [SDKProperty("image_type", IsQuery = true)]
         [JsonProperty("image_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ImageTypeEnum ImageType { get; set; }
+        public string ImageType { get; set; }
+
         [SDKProperty("limit", IsQuery = true)]
         [JsonProperty("limit", NullValueHandling = NullValueHandling.Ignore)]
         public int? Limit { get; set; }
@@ -664,7 +443,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
 
         [SDKProperty("resource_type", IsQuery = true)]
         [JsonProperty("resource_type", NullValueHandling = NullValueHandling.Ignore)]
-        public ResourceTypeEnum ResourceType { get; set; }
+        public string ResourceType { get; set; }
+
         [SDKProperty("sort", IsQuery = true)]
         [JsonProperty("sort", NullValueHandling = NullValueHandling.Ignore)]
         public string Sort { get; set; }
@@ -702,6 +482,10 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("show_replication", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowReplication { get; set; }
 
+        [SDKProperty("incremental", IsQuery = true)]
+        [JsonProperty("incremental", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Incremental { get; set; }
+
 
 
         /// <summary>
@@ -733,6 +517,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             sb.Append("  parentId: ").Append(ParentId).Append("\n");
             sb.Append("  usedPercent: ").Append(UsedPercent).Append("\n");
             sb.Append("  showReplication: ").Append(ShowReplication).Append("\n");
+            sb.Append("  incremental: ").Append(Incremental).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -863,6 +648,11 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     this.ShowReplication == input.ShowReplication ||
                     (this.ShowReplication != null &&
                     this.ShowReplication.Equals(input.ShowReplication))
+                ) && 
+                (
+                    this.Incremental == input.Incremental ||
+                    (this.Incremental != null &&
+                    this.Incremental.Equals(input.Incremental))
                 );
         }
 
@@ -918,6 +708,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     hashCode = hashCode * 59 + this.UsedPercent.GetHashCode();
                 if (this.ShowReplication != null)
                     hashCode = hashCode * 59 + this.ShowReplication.GetHashCode();
+                if (this.Incremental != null)
+                    hashCode = hashCode * 59 + this.Incremental.GetHashCode();
                 return hashCode;
             }
         }

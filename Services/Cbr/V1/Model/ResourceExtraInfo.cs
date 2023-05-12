@@ -19,6 +19,9 @@ namespace G42Cloud.SDK.Cbr.V1.Model
         [JsonProperty("exclude_volumes", NullValueHandling = NullValueHandling.Ignore)]
         public List<string> ExcludeVolumes { get; set; }
 
+        [JsonProperty("include_volumes", NullValueHandling = NullValueHandling.Ignore)]
+        public List<ResourceExtraInfoIncludeVolumes> IncludeVolumes { get; set; }
+
 
 
         /// <summary>
@@ -29,6 +32,7 @@ namespace G42Cloud.SDK.Cbr.V1.Model
             var sb = new StringBuilder();
             sb.Append("class ResourceExtraInfo {\n");
             sb.Append("  excludeVolumes: ").Append(ExcludeVolumes).Append("\n");
+            sb.Append("  includeVolumes: ").Append(IncludeVolumes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -55,6 +59,12 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                     this.ExcludeVolumes != null &&
                     input.ExcludeVolumes != null &&
                     this.ExcludeVolumes.SequenceEqual(input.ExcludeVolumes)
+                ) && 
+                (
+                    this.IncludeVolumes == input.IncludeVolumes ||
+                    this.IncludeVolumes != null &&
+                    input.IncludeVolumes != null &&
+                    this.IncludeVolumes.SequenceEqual(input.IncludeVolumes)
                 );
         }
 
@@ -68,6 +78,8 @@ namespace G42Cloud.SDK.Cbr.V1.Model
                 int hashCode = 41;
                 if (this.ExcludeVolumes != null)
                     hashCode = hashCode * 59 + this.ExcludeVolumes.GetHashCode();
+                if (this.IncludeVolumes != null)
+                    hashCode = hashCode * 59 + this.IncludeVolumes.GetHashCode();
                 return hashCode;
             }
         }
