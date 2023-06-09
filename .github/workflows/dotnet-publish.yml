@@ -17,6 +17,6 @@ jobs:
         dotnet build
         cp $(find . -type f -name "*.nupkg") "${GITHUB_WORKSPACE}"
     - name: Publish package
-      run: dotnet nuget push "*.nupkg" -k "${API_KEY}" -s https://api.nuget.org/v3/index.json --timeout 300
+      run: dotnet nuget push "*.nupkg" --api-key "${API_KEY}" --source https://api.nuget.org/v3/index.json --timeout 300
       env:
         API_KEY: ${{ secrets.API_KEY }}
