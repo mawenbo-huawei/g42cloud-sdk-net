@@ -14,7 +14,7 @@ jobs:
         dotnet-version: '6.0.x'
     - name: Build package
       run: |
-        dotnet build
+        dotnet pack
         find . -type f -name "*.nupkg" -exec cp {} . \;
     - name: Publish package
       run: dotnet nuget push "*.nupkg" --api-key "${API_KEY}" --source https://api.nuget.org/v3/index.json --timeout 300
