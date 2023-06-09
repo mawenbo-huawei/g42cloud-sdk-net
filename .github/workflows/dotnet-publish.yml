@@ -15,11 +15,6 @@ jobs:
     - name: Build package
       run: dotnet build
     - name: Publish package
-      run: |
-        for each in $(find "${GITHUB_WORKSPACE}" -type f -name "*.nupkg")
-        do
-          dotnet nuget push "${each}" -k "${API_KEY}" -s https://api.nuget.org/v3/index.json --timeout 300
-        done
-      shell: bash
+      run: find "${GITHUB_WORKSPACE}" -type f -name "*.nupkg" -exec dotnet nuget push {} -k "${API_KEY}" -s https://api.nuget.org/v3/index.json --timeout 300 \;
       env:
         API_KEY: ${{ secrets.API_KEY }}
