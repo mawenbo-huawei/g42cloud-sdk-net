@@ -2,7 +2,7 @@ name: Upload Dotnet Package To Nuget
 on:
   workflow_dispatch:
   release:
-    types: [published]
+    types: [created]
 jobs:
   deploy:
     runs-on: ubuntu-22.04
@@ -11,10 +11,12 @@ jobs:
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '2.1.x'
     - name: Build package
       run: |
-        dotnet pack
+        latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+        version=$(echo "${latest_tag}" | grep -oE '[0-9]+.+')
+        dotnet pack -c Release /p:PackageVersion="${version}"
         find . -type f -name "*.nupkg" -exec cp {} . \;
     - name: Publish package
       run: dotnet nuget push "*.nupkg" --api-key "${API_KEY}" --source https://api.nuget.org/v3/index.json --timeout 300 --skip-duplicate
