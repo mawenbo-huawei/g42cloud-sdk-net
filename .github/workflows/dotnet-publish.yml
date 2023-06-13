@@ -15,6 +15,7 @@ jobs:
     - name: Build package
       run: |
         version=$(grep -oP '(?<=<Version>)[^<]+' $(find "${GITHUB_WORKSPACE}/Services" -maxdepth 2 -mindepth 2 -type f -name *.csproj -print -quit))
+        echo "version is ${version}, packing to release..."
         dotnet pack -c Release /p:PackageVersion="${version}"
         find . -type f -name "*.nupkg" -exec cp {} . \;
     - name: Publish package
