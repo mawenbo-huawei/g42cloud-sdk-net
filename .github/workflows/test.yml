@@ -11,3 +11,4 @@ jobs:
     - name: Test
       run: |
         echo "${GITHUB_REF}" | grep -oE '[0-9]+.+'
+      shell: bash
