@@ -1,0 +1,13 @@
+name: Test
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test
+      run: |
+        echo "${GITHUB_REF}" | grep -oE '[0-9]+.+'
